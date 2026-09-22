@@ -1,0 +1,7 @@
+# This repo is scoped to the DodoChat pre-entregable deliverable + its
+# presentation site only. Everything below stays local and out of git.
+CHALLENGE.md
+activities/
+presentations/
+templates/
+deliverables/pre_entregable.docx.orig-backup

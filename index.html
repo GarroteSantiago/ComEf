@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DodoChat · Pre-Entregable</title>
+<meta name="description" content="Pre-Entregable del reporte de estrategia de comunicación y desarrollo de marca para DodoChat — Comunicación Efectiva 2026, Comisión Informáticos, Equipo 6.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#0D7A68;
+    --green-dark:#095c50;
+    --navy:#1A365D;
+    --linen:#F8FAFC;
+    --ink:#1e293b;
+    --ink-soft:#475569;
+    --line:#e2e8f0;
+    --amber:#b45309;
+    --amber-bg:#fef3c7;
+    --ok:#0D7A68;
+    --ok-bg:#e6f5f2;
+    --radius:14px;
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--linen);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    line-height:1.6;
+  }
+  h1,h2,h3,h4,.display{
+    font-family:'Plus Jakarta Sans',system-ui,sans-serif;
+    color:var(--navy);
+    font-weight:700;
+    line-height:1.15;
+    margin:0;
+  }
+  a{color:var(--green);}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+
+  /* ---- top bar ---- */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(26,54,93,.96);
+    backdrop-filter:blur(6px);
+    color:#fff;
+  }
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:16px;}
+  .brand{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;color:#fff;font-size:16px;letter-spacing:.2px;white-space:nowrap;}
+  .brand span{color:#7fd6c4;}
+  nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;}
+  nav::-webkit-scrollbar{display:none;}
+  nav a{
+    color:#cbd5e1;text-decoration:none;font-size:13.5px;font-weight:600;
+    padding:8px 10px;border-radius:8px;white-space:nowrap;
+  }
+  nav a:hover{color:#fff;background:rgba(255,255,255,.08);}
+
+  /* ---- hero ---- */
+  .hero{
+    background:linear-gradient(160deg,var(--navy) 0%,#122644 60%,#0c1c33 100%);
+    color:#fff;padding:64px 0 56px;
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    color:#a9e6d9;background:rgba(13,122,104,.25);border:1px solid rgba(127,214,196,.35);
+    padding:6px 12px;border-radius:999px;margin-bottom:20px;
+  }
+  .hero h1{font-size:clamp(30px,5vw,46px);color:#fff;max-width:820px;}
+  .hero p.lead{font-size:18px;color:#cbd5e1;max-width:640px;margin-top:14px;}
+  .meta-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:14px;margin-top:36px;padding-top:28px;border-top:1px solid rgba(255,255,255,.14);
+  }
+  .meta-grid div{font-size:13px;}
+  .meta-grid .k{color:#8fa3c4;text-transform:uppercase;letter-spacing:.05em;font-size:11px;font-weight:700;margin-bottom:4px;}
+  .meta-grid .v{color:#fff;font-weight:600;font-size:14.5px;}
+  .cta-row{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:11px 18px;border-radius:10px;font-weight:700;font-size:14px;
+    text-decoration:none;border:1px solid transparent;
+  }
+  .btn-primary{background:var(--green);color:#fff;}
+  .btn-primary:hover{background:var(--green-dark);}
+  .btn-ghost{border-color:rgba(255,255,255,.3);color:#fff;}
+  .btn-ghost:hover{background:rgba(255,255,255,.08);}
+
+  /* ---- sections ---- */
+  section{padding:56px 0;}
+  section.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .kicker{color:var(--green);font-weight:700;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;}
+  .section-title{font-size:clamp(22px,3vw,30px);max-width:760px;}
+  .section-sub{color:var(--ink-soft);max-width:680px;margin-top:10px;font-size:15.5px;}
+
+  .callout{
+    background:var(--amber-bg);border:1px solid #fde68a;border-left:5px solid var(--amber);
+    border-radius:var(--radius);padding:22px 24px;margin-top:28px;
+  }
+  .callout h4{color:#92400e;font-size:14.5px;margin-bottom:8px;}
+  .callout p{margin:0;color:#78350f;font-size:15px;}
+
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px 22px;
+  }
+  .grid{display:grid;gap:16px;margin-top:26px;}
+  .grid-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));}
+  .grid-3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
+  .grid-4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));}
+
+  .stat-card .num{font-family:'Plus Jakarta Sans';font-weight:800;font-size:28px;color:var(--green);}
+  .stat-card h4{font-size:14.5px;margin:6px 0 6px;color:var(--navy);}
+  .stat-card p{font-size:13.8px;color:var(--ink-soft);margin:0;}
+
+  .persona{border-top:4px solid var(--green);}
+  .persona .tag{
+    display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+    background:var(--ok-bg);color:var(--green-dark);padding:3px 9px;border-radius:999px;margin-bottom:8px;
+  }
+  .persona h3{font-size:18px;}
+  .persona .role{color:var(--ink-soft);font-size:13.5px;margin-bottom:12px;}
+  .persona dl{margin:0;font-size:14px;}
+  .persona dt{font-weight:700;color:var(--navy);margin-top:10px;font-size:12.5px;text-transform:uppercase;letter-spacing:.03em;}
+  .persona dd{margin:4px 0 0;color:var(--ink-soft);}
+
+  table.pestel{width:100%;border-collapse:collapse;margin-top:26px;font-size:14.2px;}
+  table.pestel th{
+    background:var(--navy);color:#fff;text-align:left;padding:10px 14px;font-size:12px;
+    text-transform:uppercase;letter-spacing:.04em;
+  }
+  table.pestel th:first-child{border-radius:10px 0 0 0;}
+  table.pestel th:last-child{border-radius:0 10px 0 0;}
+  table.pestel td{padding:13px 14px;border-bottom:1px solid var(--line);vertical-align:top;}
+  table.pestel tr:nth-child(even) td{background:#f1f5f9;}
+  table.pestel td.dim{font-weight:700;color:var(--navy);white-space:nowrap;}
+
+  .bench-list{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:10px;}
+  .bench-list li{
+    background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-size:14.3px;
+  }
+  .bench-list li.win{border-color:var(--green);background:var(--ok-bg);}
+  .bench-list li b{color:var(--navy);}
+
+  .canvas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px;}
+  .canvas-cell{
+    background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-size:13.3px;
+  }
+  .canvas-cell .n{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:22px;height:22px;border-radius:50%;background:var(--navy);color:#fff;
+    font-size:11.5px;font-weight:700;margin-bottom:8px;
+  }
+  .canvas-cell h5{font-size:13px;margin:0 0 5px;color:var(--navy);}
+  .canvas-cell p{margin:0;color:var(--ink-soft);}
+  @media (max-width:820px){.canvas-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.canvas-grid{grid-template-columns:1fr;}}
+
+  .actors-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:26px;}
+  .actor-card{border-radius:var(--radius);padding:18px;color:#fff;}
+  .actor-card h4{color:#fff;font-size:14px;margin-bottom:8px;}
+  .actor-card p{margin:0;font-size:13.5px;opacity:.95;}
+  .actor-card.allies{background:linear-gradient(155deg,#0D7A68,#0a5c4f);}
+  .actor-card.blockers{background:linear-gradient(155deg,#b91c1c,#7f1d1d);}
+  .actor-card.regs{background:linear-gradient(155deg,#1A365D,#0c1c33);}
+  .actor-card.tech{background:linear-gradient(155deg,#475569,#1e293b);}
+
+  .hmw-quote{
+    margin-top:26px;background:var(--navy);color:#fff;border-radius:var(--radius);
+    padding:32px 30px;font-family:'Plus Jakarta Sans';font-size:19px;font-weight:600;line-height:1.5;
+  }
+  .hmw-quote .q{color:#7fd6c4;font-size:34px;line-height:0;position:relative;top:12px;}
+
+  .pov-card{border-left:4px solid var(--navy);}
+  .pov-card h4{font-size:14px;color:var(--navy);margin-bottom:8px;}
+  .pov-card p{font-size:14.5px;color:var(--ink-soft);margin:0;}
+  .pov-card b{color:var(--ink);}
+
+  .gc-ring{display:grid;gap:14px;margin-top:26px;}
+  .gc-row{display:grid;grid-template-columns:110px 1fr;gap:18px;align-items:center;}
+  .gc-badge{
+    width:100%;aspect-ratio:1;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    color:#fff;font-family:'Plus Jakarta Sans';font-weight:800;font-size:14px;
+  }
+  .gc-why{background:var(--green);}
+  .gc-how{background:#2a4a75;}
+  .gc-what{background:#8fa3c4;color:var(--navy);}
+  .gc-row p{margin:0;font-size:14.8px;color:var(--ink-soft);}
+  .gc-row b{color:var(--navy);}
+
+  .swatch{
+    border-radius:12px;height:96px;display:flex;align-items:flex-end;padding:12px;color:#fff;
+    font-family:'Plus Jakarta Sans';font-weight:700;font-size:13px;
+  }
+  .swatch.linen{color:var(--ink);border:1px solid var(--line);}
+  .color-card p{font-size:13px;color:var(--ink-soft);margin:10px 0 0;}
+  .color-card .hex{font-family:monospace;font-size:12.5px;color:var(--navy);font-weight:700;}
+
+  .type-card .sample{font-size:30px;margin:6px 0 4px;color:var(--ink);}
+  .type-card.jakarta .sample{font-family:'Plus Jakarta Sans';font-weight:700;}
+  .type-card.inter .sample{font-family:'Inter';font-weight:500;}
+  .type-card .name{font-weight:700;color:var(--navy);font-size:13.5px;}
+  .type-card .use{font-size:13px;color:var(--ink-soft);margin-top:4px;}
+
+  .slogan{
+    margin-top:18px;font-family:'Plus Jakarta Sans';font-size:20px;font-weight:700;color:var(--navy);
+  }
+  .slogan small{display:block;font-family:'Inter';font-weight:500;font-size:14px;color:var(--ink-soft);margin-top:6px;}
+
+  .journey{display:flex;gap:0;margin-top:30px;overflow-x:auto;padding-bottom:8px;}
+  .journey-step{
+    flex:1 1 190px;min-width:190px;position:relative;padding:0 14px 0 0;
+  }
+  .journey-step .dot{
+    width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;
+    font-family:'Plus Jakarta Sans';margin-bottom:10px;
+  }
+  .journey-step .bar{position:absolute;top:15px;left:30px;right:0;height:2px;background:var(--line);}
+  .journey-step:last-child .bar{display:none;}
+  .journey-step h5{font-size:13.5px;color:var(--navy);margin-bottom:5px;}
+  .journey-step p{font-size:12.8px;color:var(--ink-soft);margin:0;}
+
+  .channels-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:22px;}
+  .channel-card{border-top:3px solid var(--green);}
+  .channel-card h5{font-size:14px;color:var(--navy);margin-bottom:6px;}
+  .channel-card p{font-size:13.5px;color:var(--ink-soft);margin:0;}
+
+  .timeline{display:flex;gap:8px;margin-top:22px;flex-wrap:wrap;}
+  .timeline .phase{
+    flex:1 1 200px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;
+  }
+  .timeline .phase .wk{font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.04em;}
+  .timeline .phase p{margin:4px 0 0;font-size:13.3px;color:var(--ink-soft);}
+
+  .story-panel{
+    margin-top:28px;background:linear-gradient(155deg,#0c1c33,#1A365D);color:#fff;
+    border-radius:var(--radius);padding:34px 32px;
+  }
+  .story-panel h3{color:#fff;font-size:20px;margin-bottom:14px;}
+  .story-panel p{color:#dbe4f3;font-size:15.3px;margin:0 0 14px;}
+  .story-panel .usage{
+    margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,.15);
+    font-size:13.8px;color:#a9e6d9;
+  }
+  .story-panel .usage b{color:#fff;}
+
+  table.rubric{width:100%;border-collapse:collapse;margin-top:26px;font-size:13.8px;}
+  table.rubric th{
+    background:var(--navy);color:#fff;text-align:left;padding:10px 14px;font-size:11.5px;
+    text-transform:uppercase;letter-spacing:.04em;
+  }
+  table.rubric td{padding:13px 14px;border-bottom:1px solid var(--line);vertical-align:top;}
+  table.rubric tr:nth-child(even) td{background:#f8fafc;}
+  table.rubric td.crit{font-weight:700;color:var(--navy);white-space:nowrap;}
+  .badge{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:999px;margin-bottom:6px;}
+  .badge.ok{background:var(--ok-bg);color:var(--green-dark);}
+  .badge.pending{background:var(--amber-bg);color:#92400e;}
+
+  footer{background:var(--navy);color:#a9b8d0;padding:36px 0;font-size:13.5px;}
+  footer a{color:#7fd6c4;}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center;}
+
+  @media (max-width:640px){
+    .gc-row{grid-template-columns:64px 1fr;}
+    .canvas-grid{gap:8px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="brand">Dodo<span>Chat</span> · Pre-Entregable</div>
+    <nav>
+      <a href="#problema">Problema</a>
+      <a href="#situacion">Situación</a>
+      <a href="#hipotesis">Hipótesis</a>
+      <a href="#marca">Marca</a>
+      <a href="#kit">Kit de Marca</a>
+      <a href="#campana">CJM &amp; Campaña</a>
+      <a href="#storytelling">Storytelling</a>
+      <a href="#autoeval">Feedback</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Comunicación Efectiva 2026 · Impact Hub / Campus Argentina</div>
+    <h1>Pre-Entregable del Reporte de Proyecto: DodoChat</h1>
+    <p class="lead">Estrategia de comunicación, diagnóstico bilateral y desarrollo de marca para una plataforma HealthTech que profesionaliza la consulta médica por WhatsApp.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="deliverables/pre_entregable.docx">Descargar el reporte completo (.docx)</a>
+      <a class="btn btn-ghost" href="#autoeval">Ver puntos abiertos para feedback</a>
+    </div>
+    <div class="meta-grid">
+      <div><div class="k">Startup asignada</div><div class="v">DodoChat (HealthTech · PBA)</div></div>
+      <div><div class="k">Cátedra</div><div class="v">Hilda y Naza</div></div>
+      <div><div class="k">Comisión / Equipo</div><div class="v">Informáticos · Equipo 6</div></div>
+      <div><div class="k">Instancia</div><div class="v">Pre-entregable · 22 de septiembre 2026</div></div>
+    </div>
+  </div>
+</header>
+
+<section id="problema">
+  <div class="wrap">
+    <div class="kicker">01 · El problema</div>
+    <h2 class="section-title">DodoChat profesionaliza lo que ya pasa todos los días en WhatsApp</h2>
+    <p class="section-sub">El paciente sigue en su WhatsApp de siempre. El médico opera desde un panel dedicado que oculta su número, emite recetas digitales con validez legal y registra la historia clínica en automático.</p>
+    <div class="callout">
+      <h4>💡 Esclarecimiento crítico del problema a resolver</h4>
+      <p>El pudor médico no es un factor más: es la principal barrera de entrada. Hoy, si el médico sigue respondiendo gratis por vergüenza a cobrar, el paciente no tiene ningún incentivo para migrar a un canal pago. A eso se suma que el paciente desconoce la economía de la salud y cree que un mensaje en WhatsApp debe ser gratuito por naturaleza. DodoChat actúa como el tercero institucional neutral que destraba esta tensión: le da al médico un motivo legítimo y protegido para cobrar, y al paciente una razón clara para pagar con gusto.</p>
+    </div>
+  </div>
+</section>
+
+<section id="situacion" class="alt">
+  <div class="wrap">
+    <div class="kicker">02 · Análisis de situación</div>
+    <h2 class="section-title">Sustento del problema y evidencia empírica</h2>
+    <div class="grid grid-4">
+      <div class="card stat-card">
+        <div class="num">85%+</div>
+        <h4>Informalidad masiva</h4>
+        <p>De los médicos de la región dependen de WhatsApp para atender consultas (Leona Health / a16z, estudio Vertex 2024).</p>
+      </div>
+      <div class="card stat-card">
+        <div class="num">USD 5.280</div>
+        <h4>Crisis salarial médica</h4>
+        <p>Ingreso anual promedio de un médico argentino. Gran parte de la atención por WhatsApp hoy es invisible y no remunerada.</p>
+      </div>
+      <div class="card stat-card">
+        <div class="num">64,5%</div>
+        <h4>Burnout</h4>
+        <p>De los médicos argentinos sufre o está en riesgo de burnout. DodoChat permite fijar franjas horarias y cobrar por ellas.</p>
+      </div>
+      <div class="card stat-card">
+        <div class="num">Ley 25.326</div>
+        <h4>Exposición legal</h4>
+        <p>Chats de WhatsApp ya son prueba documental en juicios de mala praxis; exige historia clínica digital estructurada.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:48px;font-size:20px;">Buyer personas</h3>
+    <div class="grid grid-2">
+      <div class="card persona">
+        <span class="tag">Target B2C</span>
+        <h3>👩‍👧 Valeria Gómez (34)</h3>
+        <div class="role">Madre trabajadora y paciente · diseñadora freelance</div>
+        <dl>
+          <dt>Pains</dt><dd>Terror a guardias nocturnas; culpa de "molestar" al pediatra un sábado de noche.</dd>
+          <dt>Gains</dt><dd>Paz mental inmediata; prefiere pagar un arancel razonable por respuesta directa garantizada.</dd>
+        </dl>
+      </div>
+      <div class="card persona">
+        <span class="tag">Target B2B</span>
+        <h3>👨‍⚕️ Dr. Martín Benítez (44)</h3>
+        <div class="role">Médico pediatra · 18 años ejerciendo</div>
+        <dl>
+          <dt>Pains</dt><dd>Vida familiar asfixiada por audios a deshora; pudor ético insoportable para cobrar por chat.</dd>
+          <dt>Gains</dt><dd>Recuperar sus noches; que un tercero cobre por él; respaldo legal con historia clínica.</dd>
+        </dl>
+      </div>
+    </div>
+
+    <h3 style="margin-top:48px;font-size:20px;">Entorno: análisis PESTEL</h3>
+    <table class="pestel">
+      <tr><th>Dimensión</th><th>Impacto y evidencia verificada en Argentina</th></tr>
+      <tr><td class="dim">Político &amp; Legal</td><td>Ley 27.553 de teleasistencia médica y recetas digitales. Ley 25.326 protege datos de salud sensibles. Las obras sociales y prepagas no contemplan el reembolso de consultas asincrónicas, dejando ese consumo fuera del sistema formal de cobertura.</td></tr>
+      <tr><td class="dim">Económico</td><td>Salario médico en mínimos históricos. Prepagas colapsadas, con demoras de hasta 90 días para pagarle al médico, frente a la liquidación inmediata que ofrece DodoChat.</td></tr>
+      <tr><td class="dim">Social</td><td>WhatsApp como hábito universal instalado. Alta expectativa de inmediatez. Saturación y demoras en guardias y centros de salud, públicos y privados.</td></tr>
+      <tr><td class="dim">Tecnológico</td><td>Dependencia de la API de Meta / WhatsApp Business. Masificación del 85%+ de billeteras virtuales (Mercado Pago), que habilita el cobro digital instantáneo.</td></tr>
+      <tr><td class="dim">Ecológico</td><td>Reducción de huella de carbono por eliminación de traslados físicos innecesarios a centros de guardia médica.</td></tr>
+    </table>
+
+    <h3 style="margin-top:48px;font-size:20px;">Benchmark competitivo</h3>
+    <ul class="bench-list">
+      <li><b>WhatsApp personal informal:</b> dominante pero insostenible — 0 cobro, 0 límites, alto riesgo legal.</li>
+      <li><b>Apps de prepagas (OSDE, Swiss Medical):</b> burocráticas, lentas, sin historial del paciente.</li>
+      <li><b>DoqChat / ProApp:</b> fallaron por exigir bajar una app nueva o sentirse un frío monedero de cobro.</li>
+      <li><b>Leona Health (regional, a16z):</b> valida el modelo sobre WhatsApp con USD 14M de financiamiento.</li>
+      <li class="win"><b>Diferencial DodoChat:</b> mantiene al paciente en su WhatsApp de siempre (fricción mínima, sin descargas) y da al médico un panel protegido con cobro automático neutral.</li>
+    </ul>
+
+    <h3 style="margin-top:48px;font-size:20px;">Business Model Canvas</h3>
+    <div class="canvas-grid">
+      <div class="canvas-cell"><div class="n">1</div><h5>Propuesta de valor</h5><p>Pacientes: respuesta garantizada &lt; 45 min con receta digital. Médicos: cobro automático sin pudor y registro legal.</p></div>
+      <div class="canvas-cell"><div class="n">2</div><h5>Segmentos de clientes</h5><p>B2C: pacientes recurrentes, familias con niños pequeños. B2B: médicos ambulatorios (pediatría, ginecología, clínica).</p></div>
+      <div class="canvas-cell"><div class="n">3</div><h5>Canales</h5><p>WhatsApp nativo (paciente) y dashboard web/app (médico). Adquisición: POP en salas de espera y QR.</p></div>
+      <div class="canvas-cell"><div class="n">4</div><h5>Relación con clientes</h5><p>Automatizada en la transacción; humana y de alta confianza en el acto médico.</p></div>
+      <div class="canvas-cell"><div class="n">5</div><h5>Fuentes de ingresos</h5><p>Comisión por transacción (take rate) + suscripción periódica al panel médico.</p></div>
+      <div class="canvas-cell"><div class="n">6</div><h5>Recursos clave</h5><p>Infraestructura de mensajería de WhatsApp vía BSP certificado, pasarela de pagos y servidores cifrados.</p></div>
+      <div class="canvas-cell"><div class="n">7</div><h5>Actividades clave</h5><p>Homologación regulatoria y legal, desarrollo de software, marketing pedagógico en consultorios.</p></div>
+      <div class="canvas-cell"><div class="n">8</div><h5>Socios clave</h5><p>Meta (BSP), Mercado Pago, Colegios Médicos, plataformas de firma digital, y un socio adicional a confirmar.</p></div>
+      <div class="canvas-cell"><div class="n">9</div><h5>Estructura de costos</h5><p>API de Meta, comisiones transaccionales, infraestructura cloud segura y marketing.</p></div>
+    </div>
+
+    <h3 style="margin-top:48px;font-size:20px;">Mapa de actores</h3>
+    <div class="actors-grid">
+      <div class="actor-card allies"><h4>Aliados</h4><p>Pacientes y médicos ambulatorios que buscan formalizar la consulta; Colegios Médicos interesados en un cobro digno.</p></div>
+      <div class="actor-card blockers"><h4>Bloqueadores potenciales</h4><p>Obras sociales y prepagas, que pierden el control del circuito de pago; el propio pudor médico como barrera cultural.</p></div>
+      <div class="actor-card regs"><h4>Reguladores y garantes</h4><p>Ministerio de Salud y organismos de protección de datos (Ley 26.529 y Ley 25.326).</p></div>
+      <div class="actor-card tech"><h4>Socios tecnológicos</h4><p>Meta (BSP de WhatsApp) y Mercado Pago, que habilitan la infraestructura sin intervenir en la decisión médica.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="hipotesis">
+  <div class="wrap">
+    <div class="kicker">03 · Definición de la hipótesis</div>
+    <h2 class="section-title">How Might We</h2>
+    <div class="hmw-quote"><span class="q">&ldquo;</span>¿Cómo podríamos transformar la percepción de la consulta médica por WhatsApp en los pacientes —de un favor informal y gratuito a un acto médico formal, prioritario y de mutua confianza— de modo que los médicos superen el pudor de cobrar y los pacientes abonen con satisfacción?</div>
+
+    <h3 style="margin-top:44px;font-size:20px;">Nicho objetivo</h3>
+    <p class="section-sub" style="margin-top:10px;">Especialidades médicas ambulatorias de seguimiento continuo: Pediatría, Ginecología/Obstetricia, Clínica Familiar y Dermatología. Grandes centros urbanos de Argentina (CABA, GBA) con alta penetración de pagos digitales.</p>
+
+    <h3 style="margin-top:44px;font-size:20px;">Point of View dual</h3>
+    <div class="grid grid-2">
+      <div class="card pov-card">
+        <h4>POV Paciente</h4>
+        <p><b>Valeria</b> NECESITA una vía rápida, directa y formal para consultar dudas sobre sus hijos con su pediatra de confianza, PORQUE la salud de su familia le genera ansiedad inmediata y prefiere pagar por un servicio oficial garantizado antes que sentir la culpa de estar molestando.</p>
+      </div>
+      <div class="card pov-card">
+        <h4>POV Médico</h4>
+        <p><b>Dr. Martín</b> NECESITA un sistema institucional que gestione y cobre automáticamente sus consultas virtuales protegiendo su línea personal, PORQUE su vocación y pudor ético le impiden pedir transferencias directamente por chat, causándole burnout.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="marca" class="alt">
+  <div class="wrap">
+    <div class="kicker">04 · Desarrollo de la marca</div>
+    <h2 class="section-title">Visión, Misión, Valores y Círculo Dorado</h2>
+    <div class="grid grid-3">
+      <div class="card"><h4 style="font-size:14px;">Misión</h4><p style="font-size:14.3px;color:var(--ink-soft);margin-top:8px;">Revalorizar el tiempo y el conocimiento del médico a través de una comunicación digital humana, segura y accesible que fortalezca el vínculo terapéutico.</p></div>
+      <div class="card"><h4 style="font-size:14px;">Visión</h4><p style="font-size:14.3px;color:var(--ink-soft);margin-top:8px;">Ser la plataforma líder de teleasistencia médica en América Latina, donde cada consulta digital sea respetada, protegida y justamente remunerada.</p></div>
+      <div class="card"><h4 style="font-size:14px;">Valores</h4><p style="font-size:14.3px;color:var(--ink-soft);margin-top:8px;">Empatía terapéutica · Dignidad profesional · Transparencia ética · Confidencialidad y seguridad de datos.</p></div>
+    </div>
+
+    <h3 style="margin-top:48px;font-size:20px;">Círculo Dorado (Simon Sinek)</h3>
+    <div class="gc-ring">
+      <div class="gc-row"><div class="gc-badge gc-why">WHY</div><p><b>Creemos que</b> una medicina de calidad empieza por cuidar a quienes nos cuidan. La tranquilidad del paciente requiere proteger el descanso y el valor del médico.</p></div>
+      <div class="gc-row"><div class="gc-badge gc-how">HOW</div><p><b>Transformamos</b> WhatsApp en un consultorio formal, seguro y transparente, mediando con empatía institucional para eliminar la incomodidad del cobro directo.</p></div>
+      <div class="gc-row"><div class="gc-badge gc-what">WHAT</div><p><b>Plataforma</b> tecnológica de teleasistencia por WhatsApp con respuesta garantizada, receta digital e historia clínica con cobro automatizado.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="kit">
+  <div class="wrap">
+    <div class="kicker">05 · Kit de marca</div>
+    <h2 class="section-title">Cercanía profesional</h2>
+    <p class="section-sub">La calidez del médico de siempre con la seguridad y formalidad de la medicina moderna. DodoChat no inventa una necesidad nueva: profesionaliza y hace visible algo que ya ocurre hoy de forma informal en miles de chats médicos — el objetivo del kit no es reinventar la consulta por WhatsApp, sino darle una cara reconocible, confiable y fácil de encontrar.</p>
+
+    <h3 style="margin-top:44px;font-size:20px;">Sistema de logotipos</h3>
+    <div class="grid grid-3">
+      <div class="card"><h5 style="color:var(--navy);font-size:14px;">Versión 1 · Isologo principal</h5><p style="font-size:13.5px;color:var(--ink-soft);margin-top:6px;">Isotipo estilizado de Dodo fusionado con cruz médica + tipografía "DodoChat". Cabecera web y folletería.</p></div>
+      <div class="card"><h5 style="color:var(--navy);font-size:14px;">Versión 2 · Isotipo / avatar</h5><p style="font-size:13.5px;color:var(--ink-soft);margin-top:6px;">Burbuja de chat circular con silueta protectora del Dodo y signo "+". Perfil de WhatsApp Business e ícono de app.</p></div>
+      <div class="card"><h5 style="color:var(--navy);font-size:14px;">Versión 3 · Monocromática</h5><p style="font-size:13.5px;color:var(--ink-soft);margin-top:6px;">Una sola tinta, alta legibilidad. Encabezados de recetas digitales PDF oficiales y tickets.</p></div>
+    </div>
+
+    <h3 style="margin-top:44px;font-size:20px;">Paleta cromática institucional</h3>
+    <div class="grid grid-3">
+      <div class="color-card"><div class="swatch" style="background:#0D7A68;">Verde Sanitario Dodo</div><p><span class="hex">#0D7A68</span> — salud, calma y equilibrio; familiaridad de WhatsApp en tono sobrio e institucional.</p></div>
+      <div class="color-card"><div class="swatch" style="background:#1A365D;">Azul Clínico Profundo</div><p><span class="hex">#1A365D</span> — autoridad médica, rigor científico, solidez institucional.</p></div>
+      <div class="color-card"><div class="swatch linen" style="background:#F8FAFC;">Blanco Lino Sanitario</div><p><span class="hex">#F8FAFC</span> — luminosidad higiénica y legibilidad óptima para recetas en pantallas móviles.</p></div>
+    </div>
+
+    <h3 style="margin-top:44px;font-size:20px;">Tipografías institucionales</h3>
+    <div class="grid grid-2">
+      <div class="card type-card jakarta"><div class="sample">Plus Jakarta Sans</div><div class="name">Títulos y botones</div><div class="use">Sans-serif geométrica humanista, moderna y legible en smartphones.</div></div>
+      <div class="card type-card inter"><div class="sample">Inter</div><div class="name">Interfaz y posología</div><div class="use">Optimizada para interfaces, cifras y recetas digitales sin ambigüedad.</div></div>
+    </div>
+
+    <h3 style="margin-top:44px;font-size:20px;">Voz, tono y slogans</h3>
+    <div class="card">
+      <p style="margin:0;font-size:14.5px;color:var(--ink-soft);">Voz empática, desestresante, transparente, profesional y resolutiva. Nunca se usa un tono recaudatorio ni juvenil informal.</p>
+      <div class="slogan">"Tu médico de confianza, ahora a un mensaje de distancia."<small>Secundario: "Cuidamos el tiempo de tu médico para que él cuide el tuyo."</small></div>
+    </div>
+
+    <h3 style="margin-top:44px;font-size:20px;">Elementos gráficos</h3>
+    <div class="grid grid-3">
+      <div class="card"><h5 style="color:var(--navy);font-size:14px;">Imágenes</h5><p style="font-size:13.5px;color:var(--ink-soft);margin-top:6px;">Fotografía cálida y real (no stock genérico) de momentos médico-paciente, con diversidad etaria y familiar.</p></div>
+      <div class="card"><h5 style="color:var(--navy);font-size:14px;">Ilustraciones</h5><p style="font-size:13.5px;color:var(--ink-soft);margin-top:6px;">Mascota Dodo en línea simple y plana, en el bot de bienvenida, estados vacíos y recetas.</p></div>
+      <div class="card"><h5 style="color:var(--navy);font-size:14px;">Mockups</h5><p style="font-size:13.5px;color:var(--ink-soft);margin-top:6px;">Chat de WhatsApp tipo, panel web del médico y receta digital en PDF en contexto real de uso.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="campana" class="alt">
+  <div class="wrap">
+    <div class="kicker">06 · Customer Journey Map &amp; plan de campaña</div>
+    <h2 class="section-title">Las 5 etapas de Valeria</h2>
+    <div class="journey">
+      <div class="journey-step"><div class="dot">1</div><div class="bar"></div><h5>Síntoma</h5><p>Fiebre nocturna de su hijo. Pánico a guardias saturadas.</p></div>
+      <div class="journey-step"><div class="dot">2</div><div class="bar"></div><h5>Contacto</h5><p>Escribe a WhatsApp con culpa. Bot de bienvenida cálido.</p></div>
+      <div class="journey-step"><div class="dot">3</div><div class="bar"></div><h5>Pago</h5><p>Arancel de referencia y garantía de respuesta según franja horaria, con guardia nocturna con recargo. Mercado Pago en 15s.</p></div>
+      <div class="journey-step"><div class="dot">4</div><div class="bar"></div><h5>Atención</h5><p>Audio clínico claro y receta digital en PDF homologada.</p></div>
+      <div class="journey-step"><div class="dot">5</div><h5>Post-consulta</h5><p>Guarda el canal oficial para futuras dudas. Fidelización.</p></div>
+    </div>
+
+    <h3 style="margin-top:48px;font-size:20px;">Plan de campaña: "La consulta que cuida a ambos"</h3>
+    <div class="grid grid-2" style="margin-top:20px;">
+      <div class="card"><h5 style="color:var(--navy);font-size:14px;">Objetivos SMART</h5><p style="font-size:13.8px;color:var(--ink-soft);margin-top:6px;">75% de adopción de pacientes habituales en 45 días; &lt;12% abandono en checkout; NPS &gt;70 puntos.</p></div>
+      <div class="card"><h5 style="color:var(--navy);font-size:14px;">Público</h5><p style="font-size:13.8px;color:var(--ink-soft);margin-top:6px;">Valeria (B2C, madres/padres de pacientes pediátricos, GBA/CABA) y Dr. Martín (B2B, médicos ambulatorios que hoy atienden gratis por WhatsApp).</p></div>
+    </div>
+
+    <div class="channels-grid">
+      <div class="card channel-card"><h5>Canal 1 · Sala de espera física</h5><p>Displays acrílicos y folleto con QR entregado por secretaria.</p></div>
+      <div class="card channel-card"><h5>Canal 2 · WhatsApp Bot</h5><p>Mensaje institucional automático que neutraliza el pudor del médico y desglosa el arancel.</p></div>
+      <div class="card channel-card"><h5>Canal 3 · Instagram/TikTok</h5><p>Reels breves sobre por qué una consulta por chat también es un acto médico responsable.</p></div>
+      <div class="card channel-card"><h5>Canal 4 · LinkedIn médico</h5><p>Prevención de burnout y formalización ética de honorarios profesionales.</p></div>
+    </div>
+
+    <div class="timeline">
+      <div class="phase"><div class="wk">Semana 1–2</div><p>Setup y material POP</p></div>
+      <div class="phase"><div class="wk">Semana 3–4</div><p>Lanzamiento y pauta</p></div>
+      <div class="phase"><div class="wk">Semana 5–6</div><p>Optimización de embudo</p></div>
+      <div class="phase"><div class="wk">Semana 7–8</div><p>Medición y escala</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="storytelling">
+  <div class="wrap">
+    <div class="kicker">07 · Storytelling</div>
+    <h2 class="section-title">"El domingo a las 11 de la noche"</h2>
+    <div class="story-panel">
+      <p>Es domingo a las 23:15. En San Isidro, Valeria acuesta a Mateo (3 años) con 38,8°C de fiebre y una erupción en el pecho. A quince kilómetros, el Dr. Martín cena con su familia tras una semana de 50 horas de trabajo. Valeria duda entre llevar al nene a una guardia colapsada o molestar al pediatra un fin de semana. El teléfono de Martín vibra; su esposa suspira con resignación y él siente la frustración de trabajar gratis y la culpa de pedir dinero.</p>
+      <p>Valeria se anima y escribe. Pero esta vez recibe la respuesta oficial de DodoChat: respuesta garantizada dentro de su franja de guardia nocturna (45 minutos), receta digital y arancel formal con recargo por horario extendido. La culpa desaparece: Valeria paga con Mercado Pago sintiéndose cuidada. Martín abre su app médica con la ficha de Mateo lista, envía un audio tranquilizador y la receta en PDF. A las 23:45 Mateo duerme en paz y Martín sigue cenando con su familia, respetado y remunerado.</p>
+      <p>DodoChat construyó el puente ético donde la salud y el respeto mutuo se vuelven a encontrar.</p>
+      <div class="usage"><b>Uso en campaña:</b> esta historia se adapta como guion del Reel de Instagram/TikTok (Canal 3) y como hook de apertura del posteo de LinkedIn médico (Canal 4), y se resume en el folleto con QR de sala de espera (Canal 1) como caso ilustrativo, siempre narrada desde la doble mirada de Valeria y el Dr. Martín.</div>
+    </div>
+  </div>
+</section>
+
+<section id="autoeval" class="alt">
+  <div class="wrap">
+    <div class="kicker">08 · Autoevaluación</div>
+    <h2 class="section-title">Puntos abiertos para la devolución docente</h2>
+    <p class="section-sub">Este pre-entregable es, por diseño, para revisión y feedback en clase. En vez de autoevaluarnos con puntaje máximo en todo, dejamos explícito qué está resuelto y qué seguimos discutiendo como equipo.</p>
+    <table class="rubric">
+      <tr><th>Criterio oficial</th><th>Subcriterio desarrollado</th><th>Estado</th></tr>
+      <tr>
+        <td class="crit">Reporte (10 pts)</td>
+        <td>Orden, cohesión y diseño impecable.</td>
+        <td><span class="badge pending">Pendiente</span><br>Unificar la ficha de cátedra (nombre completo de los docentes).</td>
+      </tr>
+      <tr>
+        <td class="crit">Análisis de Situación (20 pts)</td>
+        <td>Sustento empírico, Buyer Personas, PESTEL, Benchmark, Canvas y Mapa de Actores.</td>
+        <td><span class="badge pending">Pendiente</span><br>Cerrar con el equipo el alcance del dato salarial (Argentina vs. Brasil).</td>
+      </tr>
+      <tr>
+        <td class="crit">Hipótesis (15 pts)</td>
+        <td>How Might We, Nicho, Problema y Solución (POV dual).</td>
+        <td><span class="badge ok">Sin observaciones</span></td>
+      </tr>
+      <tr>
+        <td class="crit">Desarrollo de Marca (15 pts)</td>
+        <td>Visión, Misión, Valores y Círculo Dorado de Simon Sinek.</td>
+        <td><span class="badge ok">Sin observaciones</span></td>
+      </tr>
+      <tr>
+        <td class="crit">Kit de Marca (20 pts)</td>
+        <td>Moodboard, 3 logos, 3 colores, tipografías, tono, slogans y elementos gráficos.</td>
+        <td><span class="badge pending">Pendiente</span><br>Producir imágenes, ilustraciones y mockups en versión final.</td>
+      </tr>
+      <tr>
+        <td class="crit">CJM + Plan de Campaña (10 pts)</td>
+        <td>CJM en 5 etapas, objetivos SMART, público, 4 canales y timeline.</td>
+        <td><span class="badge pending">Pendiente</span><br>Validar con la cátedra la garantía de respuesta nocturna y el arancel de referencia.</td>
+      </tr>
+      <tr>
+        <td class="crit">Storytelling (10 pts)</td>
+        <td>Narrativa nuclear con arco dramático alineada a la campaña.</td>
+        <td><span class="badge ok">Sin observaciones</span></td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>Comisión Informáticos · Equipo 6 — Comunicación Efectiva 2026, 2° cuatrimestre.</div>
+    <div><a href="deliverables/pre_entregable.docx">Reporte completo (.docx)</a> · <a href="https://github.com/GarroteSantiago/ComEf">Repositorio en GitHub</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
